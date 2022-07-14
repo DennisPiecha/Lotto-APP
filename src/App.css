@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+
+.App {
+  text-align: center;
+  margin-top: 15%;
+  font-family: "Istok Web", sans-serif;
+}
+
+h1 {
+  font-size: 4em;
+  color: rgb(204, 24, 114);
+  font-weight: 900;
+
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+
+  text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+    calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
+      0px var(--stroke-color);
+}
+
+@supports (text-shadow: 1px 1px 1px 1px black) {
+  h1 {
+    text-shadow: var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+      var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+  }
+}
+
+.App p {
+  font-size: 2.5em;
+  color: #cc1872;
+  font-weight: 900;
+
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+
+  text-shadow: var(--x-offset) var(--y-offset) 0px var(--background-color),
+    calc(var(--x-offset) - var(--stroke)) calc(var(--y-offset) + var(--stroke))
+      0px var(--stroke-color);
+}
+
+@supports (text-shadow: 1px 1px 1px 1px black) {
+  h1 {
+    text-shadow: var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
+      var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App {
+    margin-top: 40%;
+  }
+}
